@@ -1,0 +1,72 @@
+li {
+  padding: 5px;
+  margin: 10px;
+  background: #5aebad;
+  /*width: 20%;*/
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+ul {
+    /*list-style-image: ("/assets/img/sushi_flat.png");*/
+    list-style-type: none;
+}
+
+.label {
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  /*background: aqua;*/
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+body {
+    background-color: #00cdcd;
+}
+
+h1, p, button {
+  font-family: 'Raleway', sans-serif;
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: black;
+
+}
+
+.container {
+  padding-top: 2%;
+  text-align: center;
+}
+
+.notEaten {
+  /*padding-left: 15%;*/
+  /*width: 15%;*/
+  /*background-color: blue;*/
+  float: left;
+  text-align: left;
+  width: 30%;
+}
+
+.eaten {
+  /*background-color: red;*/
+  float: right;
+  width: 30%;
+}
+
+.addSushi {
+  /*background-color: green;*/
+  /*width: 20%;*/
+  /*margin-right: 30%;*/
+}

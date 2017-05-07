@@ -1,0 +1,143 @@
+<!-- <h1>Sushis!</h1>
+
+<h2>Sushis that are not sleepy!</h2>
+
+<ul>
+  {{#each sushi}}
+    {{#unless this.sleepy}}
+      <li>
+        {{this.name}}
+
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="sleepy" value="true">
+          <button type="submit">SLEEP TIME!</button>
+        </form>
+      </li>
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Sushis that are sleepy!</h2>
+
+<ul>
+  {{#each sushi}}
+    {{#if this.sleepy}}
+      <li>
+        {{this.name}}
+
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="sleepy" value="false">
+          <button type="submit">WAKE UP!</button>
+        </form>
+      </li>
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a Sushi</h2>
+<form class="create-update-form" action="/" method="POST">
+
+  <div class="form-group">
+    <label for="ca">Sushi Name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="slee">Sleepy?</label><br>
+    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
+    <input type="radio" name="sleepy" value="0"> Awake
+  </div>
+
+  <button type="submit">Add Sushi</button>
+</form> -->
+<div class="container">
+<img src="/assets/img/sushi_flat.png" height="200px">
+
+<h1>Eat-da-sushi!</h1>
+
+<div class="notEaten">
+  <h3>Sushi to eat!</h3>
+    <ul>
+      {{#each sushi}}
+        {{#unless this.devoured}}
+          <!-- <li class="btn btn-default"> -->
+          <!-- <li class="label label-success"> -->
+            <li>
+            {{ this.id }}.
+            {{this.sushi_name}}
+
+            <form action="/{{this.id}}?_method=PUT" method="POST">
+              <input type="hidden" name="devoured" value="true">
+              <button type="submit" class="btn btn-info">Devour!</button>
+            </form>
+            <!-- <button type="submit">Devour!</button> -->
+          </li>
+          <!-- <button type="submit" style="float:clear">Devour!</button> -->
+        {{/unless}}
+      {{/each}}
+    </ul>
+</div>
+
+<div class="eaten">
+  <h3>Eaten sushi!</h3>
+    <ul>
+      {{#each sushi}}
+        {{#if this.devoured}}
+          <!-- <li class="btn btn-default"> -->
+          <!-- <li class="label label-success"> -->
+            <li>
+            {{ this.id}}.
+            {{this.sushi_name}}
+
+            <!-- <form action="/{{this.id}}?_method=PUT" method="POST">
+              <input type="hidden" name="devoured" value="true">
+              <button type="submit" class="btn btn-info">Devour!</button>
+            </form> -->
+            <!-- <button type="submit">Devour!</button> -->
+          </li>
+          <!-- <button type="submit" style="float:clear">Devour!</button> -->
+        {{/if}}
+      {{/each}}
+    </ul>
+</div>
+
+<form class="create-update-form" action="/" method="POST">
+
+  <div class="form-group">
+    <label for="ca">Sushi Name:</label><br>
+    <input type="text" id="ca" name="sushi_name">
+  </div>
+
+  <!-- <div class="form-group">
+    <label for="slee">Sleepy?</label><br>
+    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
+    <input type="radio" name="sleepy" value="0"> Awake
+  </div> -->
+
+  <button type="submit" class="btn btn-info addSushi">Add Sushi</button>
+</form>
+<!-- <br><br>
+<form class="create-update-form addSushi" action="/" method="POST"> -->
+<!-- <textarea name="text" cols="25" rows="5">
+List your sushi orders here!
+</textarea> -->
+<!-- <input type="text" id="ca" name="name">
+<br> -->
+<!--<button>Submit</button>-->
+
+
+  <!-- <div class="form-group">
+    <label for="ca">Sushi Name:</label>
+    <input type="text" id="ca" name="name">
+  </div> -->
+
+  <!-- <div class="form-group">
+    <label for="slee">Devoured?</label><br>
+    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
+    <input type="radio" name="sleepy" value="0"> Awake
+  </div> -->
+
+  <!-- <button type="submit" class="btn btn-info">Add Sushi</button>
+</form> -->
+
+</div>
